@@ -6,6 +6,7 @@ var timerInterval;
 var startBtn = document.getElementById("startBtn");
 var stopBtn = document.getElementById("stopBtn");
 var timerDisplay = document.getElementById("timerDisplay");
+var ResultsDisplay = document.getElementById("ResultsDisplay")
 
 // Event listeners
 startBtn.addEventListener("click", startTimer);
@@ -13,7 +14,7 @@ stopBtn.addEventListener("click", stopTimer);
 
 function startTimer() {
   // Reset the timer display
-  timerDisplay.innerText = "3.000";
+  timerDisplay.innerText = "3.000ms";
 
   // Disable the start button
   startBtn.disabled = true;
@@ -61,32 +62,7 @@ function updateTimer() {
   if (remainingTime <= 0) {
     // Clear the interval
     clearInterval(timerInterval);
-
-    // Display "Try Again"
-    timerDisplay.innerText = "Try Again";
-
-    // Enable the start button
-    startBtn.disabled = false;
-
-    return;
-  }
-
-  // Display the remaining time with three decimal places
-  timerDisplay.innerText = remainingTime.toFixed(3);
-}
-function updateTimer() {
-  // Calculate the remaining time
-  var currentTime = new Date().getTime();
-  var remainingTime = 3 - ((currentTime - startTime) / 1000);
-
-  // Check if the timer has reached zero
-  if (remainingTime <= 0) {
-    // Clear the interval
-    clearInterval(timerInterval);
-
-    // Display "Try Again"
-    timerDisplay.innerText = "Try Again";
-
+    
     // Enable the start button
     startBtn.disabled = false;
 

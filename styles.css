@@ -7,7 +7,7 @@ body {
 h1 {
     text-align: center;
     font-size: 50px;
-    Color: green;
+    Color: rgb(255, 1, 1);
 
   }
   
@@ -23,5 +23,6 @@ h1 {
   #ResultsDisplay {
     font-size: 48px;
     text-align: center;
+    color: limegreen;
   }
  
